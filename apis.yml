@@ -1,0 +1,7 @@
+aid: servicemaster-global-holdings
+url: https://raw.githubusercontent.com/api-evangelist/servicemaster-global-holdings/refs/heads/main/apis.yml
+modified: '2026-03-24'
+apis: []
+common:
+  - type: Website
+    url: https://www.servicemaster-global-holdings.com
