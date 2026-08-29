@@ -1,0 +1,100 @@
+generated: '2026-08-29'
+method: probed
+source: >-
+  Direct HTTP probes of every live host associated with the ServiceMaster brand.
+  ServiceMaster Global Holdings itself no longer operates a domain — its own
+  registered pointer (www.servicemaster-global-holdings.com) does not resolve —
+  so the probe targets the surviving ServiceMaster Brands hosts.
+note: >-
+  Every /.well-known/ path probed returned 404 (or 403). No document was served on
+  any host, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this
+  file records a verified absence, not a presence. www.servicemaster.com and
+  www.servicemasterclean.com answer 404 with an HTML site shell; the 62,984-byte
+  and 41,578-byte bodies are the WordPress 404 template, not documents.
+  www.servicemasterrestore.com returns 403 on /.well-known/security.txt from an
+  edge policy and 404 elsewhere.
+hosts:
+  - host: www.servicemaster.com
+    note: >-
+      ServiceMaster Brands corporate site (Roark Capital), the surviving operator
+      of the ServiceMaster brand after the 2020 divestiture.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.servicemasterclean.com
+    note: ServiceMaster Clean brand site.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.servicemasterrestore.com
+    note: ServiceMaster Restore brand site.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: www.servicemaster-global-holdings.com
+    note: >-
+      The Website pointer previously carried in apis.yml. The domain does not
+      resolve (NXDOMAIN) — no probe could be completed and the pointer has been
+      replaced with the live successor site.
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        error: dns-nxdomain
