@@ -34,9 +34,13 @@ tags:
 - Franchising
 - Acquired
 url: https://raw.githubusercontent.com/api-evangelist/servicemaster-global-holdings/refs/heads/main/apis.yml
-modified: '2026-08-29'
+modified: '2026-10-06'
 apis: []
 common:
+- url: https://www.servicemaster.com/newsroom/
+  type: Blog
+- url: https://www.servicemaster.com/feed/
+  type: BlogRSS
 - type: DomainSecurity
   url: security/servicemaster-global-holdings-domain-security.yml
 - type: LinkedIn
